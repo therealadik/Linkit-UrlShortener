@@ -1,1 +1,1 @@
-rootProject.name = "UrlShortenerService"
+rootProject.name = "Linkit-UrlShortener"
