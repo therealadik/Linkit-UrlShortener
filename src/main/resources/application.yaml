@@ -33,3 +33,12 @@ url:
   cache:
     min-requests: 10
     ttl-hours: 24
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show_details: always

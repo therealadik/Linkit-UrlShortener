@@ -31,6 +31,7 @@ public class UrlCache {
         String counterKey = COUNTER_PREFIX + hash;
 
         Long requestCount = redisTemplate.opsForValue().increment(counterKey);
+        log.info("Request count {} for hash: {}", requestCount, hash);
 
         if (requestCount == null) {
             log.warn("Failed to increment counter for hash: {}", hash);
@@ -42,6 +43,8 @@ public class UrlCache {
         if (requestCount == 1) {
             redisTemplate.expire(counterKey, cacheTtlHours, TimeUnit.HOURS);
         }
+
+
 
         String cachedUrl = redisTemplate.opsForValue().get(urlKey);
         if (cachedUrl != null) {

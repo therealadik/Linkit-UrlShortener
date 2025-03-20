@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include: 
       file: db/changelog/changesets/V001_init.sql
+  - include:
+      file: db/changelog/changesets/V000_init_monitoring.sql

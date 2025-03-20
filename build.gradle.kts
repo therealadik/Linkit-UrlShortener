@@ -60,6 +60,12 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.12.0")
     testImplementation("org.assertj:assertj-core:3.27.3")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    /**
+     * Monitoring
+     */
+    implementation("io.micrometer:micrometer-registry-prometheus")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
 }
 
 tasks.withType<Test> {
